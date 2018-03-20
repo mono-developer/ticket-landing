@@ -1,0 +1,18 @@
+
+
+
+<!-- <div class="header-bar">
+  <img class="logo-img" src="../../../assets/img/icons/icon-dark.png" alt="">
+
+
+</div> -->
+<div class="content-container" fxLayout="column">
+
+  <ms-toolbar [sidenav]="sidenav"></ms-toolbar>
+  <div class="main-container" #scrollContainer style="background: #323232">
+    <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+  </div>
+
+  </div>
+
+

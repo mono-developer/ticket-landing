@@ -95,6 +95,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
 }
 
+//Booking Dialog
 @Component({
   templateUrl: 'booking-dialog.component.html',
   styleUrls: ['./dialog.component.scss'],
@@ -109,6 +110,8 @@ export class BookingDialogComponent {
     this.dialogRef.close();
   }
 }
+
+// Description Dialog
 
 @Component({
   templateUrl: 'description-dialog.component.html',

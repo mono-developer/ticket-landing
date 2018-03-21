@@ -3,6 +3,7 @@ import {fadeInAnimation} from "../../route.animation";
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { TicketDataService } from "../../../provider/ticketDemoService";
 
 @Component({
   selector: 'ms-dashboard',
@@ -16,7 +17,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 export class DashboardComponent implements OnInit, AfterViewInit {
 
   selectedIndex: number = 0;
-  categoryList: any = [];
+  categoryData: any = [];
 
   config: any;
   profiles: any;
@@ -29,26 +30,11 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     public router: Router,
     public route: ActivatedRoute,
     public dialog: MatDialog,
+    public ticketData: TicketDataService
   ) {
 
-    this.profiles = [
-      { id: 0, event_name: 'World Music', category: 'Music', date: '22-24 March 2018', location: 'Street West USA', url: 'assets/img/backgrounds/gallery-1.jpg' },
-      { id: 1, event_name: 'Perfect Concert', category: 'Concert', date: '19-20 April 2018', location: 'Street West USA', url: '../../../assets/img/backgrounds/gallery-2.jpg' },
-      { id: 2, event_name: 'Actress Solor', category: 'Music', date: '20-24 March 2018', location: 'Street West USA', url: '../../../assets/img/backgrounds/gallery-3.jpg' },
-      { id: 3, event_name: 'Lunch', category: 'Family', date: '18-26 March 2018', location: 'Street West USA', url: '../../../assets/img/backgrounds/gallery-1.jpg' },
-      { id: 4, event_name: 'Melody Songs', category: 'Music', date: '01-07 April 2018', location: 'Street West USA', url: '../../../assets/img/backgrounds/gallery-2.jpg' },
-      { id: 5, event_name: 'Base Ball', category: 'Sport', date: '02-11 April 2018', location: 'Street West USA', url: '../../../assets/img/backgrounds/gallery-3.jpg' },
-    ]
-
-    this.categoryList = [
-      { id: 0, name: 'Music'},
-      { id: 1, name: 'Sports' },
-      { id: 2, name: 'Theater' },
-      { id: 3, name: 'Concerts' },
-      { id: 4, name: 'Family' },
-      { id: 5, name: 'Others' },
-      { id: 6, name: 'Circus' },
-    ];
+    this.profiles = this.ticketData.profileData;
+    this.categoryData = this.ticketData.categoryList;
 
     this.config = {
       pagination: '.swiper-pagination',

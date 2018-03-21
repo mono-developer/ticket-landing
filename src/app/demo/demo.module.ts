@@ -30,6 +30,8 @@ import { ScrollbarModule } from '../core/scrollbar/scrollbar.module';
 import { MatIconRegistry, MatStepperModule, MatTableModule, MatDialogModule, } from "@angular/material";
 import { SwiperModule } from 'angular2-useful-swiper'; //or for angular-cli the path will be ../../node_modules/angular2-useful-swiper
 
+import { TicketDataService } from "../../provider/ticketDemoService";
+
 
 @NgModule({
   imports: [
@@ -76,6 +78,7 @@ import { SwiperModule } from 'angular2-useful-swiper'; //or for angular-cli the 
   ],
   providers: [
     D3ChartService,
+    TicketDataService
   ]
 })
 export class DemoModule { }

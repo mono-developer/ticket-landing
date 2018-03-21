@@ -3,85 +3,189 @@
   <!-- <div class="bg-app">
   </div> -->
 
-  <div class="bg-app">
-    <!-- Swiper image -->
-    <swiper [config]="config" #usefulSwiper>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let item of profiles">
-          <div class="bg-img" [ngStyle]="{'background-image': 'url(' + item.url + ')'}"></div>
-          <div class="description">
-            <h1>{{item.category}}</h1>
-            <p class="event_name">{{item.event_name}}</p>
-            <div ngsyle="background-image: "></div>
-            <p class="date_location">
-              <img class="log-icon" src="../../../assets/img/icons/calendar-white.png" alt=""> {{item.date}}</p>
-            <p class="date_location">
-              <img class="log-icon" src="../../../assets/img/icons/location-white.png" alt=""> {{item.location}}</p>
-            <div class="share_btns">
-              <button class="left_btn" mat-button (click)="openBookingDialog(item.event_name)">Book Now</button>
-              <button class="right_btn" mat-button (click)="openDescriptionDialog(item)">Description</button>
+    <div class="bg-app">
+        <!-- Swiper image -->
+        <swiper [config]="config" #usefulSwiper>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let item of profiles">
+                <div class="bg-img" [ngStyle]="{'background-image': 'url(' + item.url + ')'}"></div>
+                <div class="description">
+                    <h1>{{item.category}}</h1>
+                    <p class="event_name">{{item.event_name}}</p>
+                <div ngsyle="background-image: "></div>
+                <p class="date_location">
+                    <img class="log-icon" src="../../../assets/img/icons/calendar-white.png" alt=""> {{item.date}}</p>
+                <p class="date_location">
+                    <img class="log-icon" src="../../../assets/img/icons/location-white.png" alt=""> {{item.location}}</p>
+                <div class="share_btns">
+                    <button class="left_btn" mat-button (click)="openBookingDialog(item.event_name)">Book Now</button>
+                    <button class="right_btn" mat-button (click)="openDescriptionDialog(item)">Description</button>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </swiper>
-  </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </swiper>
+    </div>
 
-  <div class="event-sec">
-    <h2>About The Ticket App</h2>
-    <div class="des">
-      <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos. Mauris in erat justo. Morbi accumsan ipsum velit.Class aptent taciti sociosqu ad litora torquent
-      per conubia nostra, per inceptos himenaeos.mauris vitae erat consequat auctor eu in elit.</p>
+    <div class="main-content">
+        <div class="event-sec">
+        <h2>About The Ticket App</h2>
+        <div class="des">
+            <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Mauris in erat justo. Morbi accumsan ipsum velit.Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos.mauris vitae erat consequat auctor eu in elit.</p>
 
-      <div class="category">
-        <mat-icon style="color: lightgreen">library_music</mat-icon>
-        <h4>MUSIC</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
+            <div class="category" *ngFor="let item of categoryData">
+                <mat-icon [ngStyle]="{'color': item.color}">{{item.icon}}</mat-icon>
+                <h4>{{item.name}}</h4>
+                <p>{{item.description}}</p>
+            </div>
 
-      <div class="category">
-        <mat-icon style="color: cornflowerblue">queue_music</mat-icon>
-        <h4>CONCERTS</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
-
-      <div class="category">
-        <mat-icon style="color: skyblue">group</mat-icon>
-        <h4>FAMILY</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
-
-      <div class="category">
-        <mat-icon style="color: fuchsia">device_hub</mat-icon>
-        <h4>THEATER</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
-
-      <div class="category">
-        <mat-icon style="color: chartreuse">fitness_center</mat-icon>
-        <h4>SPORT</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
-
-      <div class="category">
-        <mat-icon style="color: cyan">music_note</mat-icon>
-        <h4>CIRCUS</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
-
-      <div class="category">
-        <mat-icon style="color: chartreuse">info_outline</mat-icon>
-        <h4>OTHERS</h4>
-        <p>The Mobile first responsive template with Material Design</p>
-      </div>
+        </div>
+        </div>
 
 
+        <div class="event-sec">
+            <h2>Schedule</h2>
+            <mat-tab-group class="schedule">
+                <mat-tab label="TODAY" class="sch-table">
+                    <div class="timeline-wrap  overflow-hide mb-30">
+                        <ul class="timeline">
+                        <li>
+                            <div class="timeline-badge">
+                            <i class="zmdi zmdi-case font-indigo"></i>
+                            </div>
+                            <div class="timeline-panel mdl-card pt-30 pb-30 border-top-indigo">
+                            <div class="timeline-heading">
+                                <h4 class="mb-10">inauguration</h4>
+                                <span class="duration mb-5">9:30am - 11:30am</span>
+                                <span class="institution">By John Doe</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="mt-25">Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet.
+                                Dicens hoc contra serpentibus isto.</p>
+                            </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge">
+                            <i class="zmdi zmdi-format-color-text font-pink"></i>
+                            </div>
+                            <div class="timeline-panel mdl-card  pt-30 pb-30 border-top-pink">
+                            <div class="timeline-heading">
+                                <h4 class="mb-10">John Live</h4>
+                                <span class="duration mb-5">11:30am - 12:30pm</span>
+                                <span class="institution">By John Doe</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="mt-25">Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet.
+                                Dicens hoc contra serpentibus isto.</p>
+                            </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="timeline-badge">
+                            <i class="zmdi zmdi-city-alt font-teal"></i>
+                            </div>
+                            <div class="timeline-panel mdl-card pt-30 pb-30 border-top-teal">
+                            <div class="timeline-heading">
+                                <h4 class="mb-10">Lunch</h4>
+                                <span class="duration mb-5">12:30pm - 1:30pm</span>
+                                <span class="institution">Lunch Break</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="mt-25">Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet.
+                                Dicens hoc contra serpentibus isto.</p>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge">
+                            <i class="zmdi zmdi-nature-people font-pink"></i>
+                            </div>
+                            <div class="timeline-panel mdl-card  pt-30 pb-30 border-top-indigo">
+                            <div class="timeline-heading">
+                                <h4 class="mb-10">Jazz Madness</h4>
+                                <span class="duration mb-5">1:30pm - 2:30pm</span>
+                                <span class="institution">By Andrew Joe</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="mt-25">Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet.
+                                Dicens hoc contra serpentibus isto.</p>
+                            </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-badge">
+                                <i class="zmdi zmdi-markunread-mailbox font-teal"></i>
+                            </div>
+                            <div class="timeline-panel mdl-card pt-30 pb-30 border-top-pink">
+                                <div class="timeline-heading">
+                                    <h4 class="mb-10">melody songs</h4>
+                                    <span class="duration mb-5">2:30pm - 5:30pm</span>
+                                    <span class="institution">By Carin Mark</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="mt-25">Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet.
+                                    Dicens hoc contra serpentibus isto.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix no-float"></li>
+                        </ul>
+                    </div>
+
+                </mat-tab>
+                <mat-tab label="THIS WEEK">This Week</mat-tab>
+                <mat-tab label="THIS MONTH">This Month</mat-tab>
+            </mat-tab-group>
+        </div>
+
+        <!-- Contact and Venue -->
+        <div class="event-sec">
+            <h2>Contact Venue</h2>
+            <div class="contact_venue">
+                <div class="contact">
+                    <h3>Hi There, Happy hear form you</h3>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <input type="text" matInput placeholder="Name" value="">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <input type="email" matInput placeholder="Email" value="">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <textarea matInput placeholder="Message"></textarea>
+                        </mat-form-field>
+
+                        <button mat-button class="submit">SUBMIT</button>
+
+                    </form>
+                </div>
+                <div class="venue">
+                    <ms-google-maps-widget height="400px"></ms-google-maps-widget>
+                </div>
+            </div>
+        </div>
 
     </div>
-  </div>
+
+
+
+    <!--  -->
+    <div class="footer-end">
+        <p class="title">Thank You For Visting.</p>
+        <p class="sub_title">Compose Ticket Application</p>
+        <img src="../../../assets/img/icons/icon-white.png" alt="">
+    </div>
+
+
 
 </div>

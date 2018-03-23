@@ -19,42 +19,48 @@ export class TicketDataService {
         category: 'Music',
         date: '22-24 March 2018',
         location: 'Street West USA',
-        url: 'assets/img/backgrounds/gallery-1.jpg'
+        url: 'assets/img/backgrounds/gallery-1.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       },
       { id: 1,
         event_name: 'Perfect Concert',
         category: 'Concert',
         date: '19-20 April 2018',
         location: 'Street West USA',
-        url: '../../../assets/img/backgrounds/gallery-2.jpg'
+        url: '../../../assets/img/backgrounds/gallery-2.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       },
       { id: 2,
         event_name: 'Actress Solor',
         category: 'Music',
         date: '20-24 March 2018',
         location: 'Street West USA',
-        url: '../../../assets/img/backgrounds/gallery-3.jpg'
+        url: '../../../assets/img/backgrounds/gallery-3.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       },
       { id: 3,
         event_name: 'Lunch',
         category: 'Family',
         date: '18-26 March 2018',
         location: 'Street West USA',
-        url: '../../../assets/img/backgrounds/gallery-1.jpg'
+        url: '../../../assets/img/backgrounds/gallery-1.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       },
       { id: 4,
         event_name: 'Melody Songs',
         category: 'Music',
         date: '01-07 April 2018',
         location: 'Street West USA',
-        url: '../../../assets/img/backgrounds/gallery-2.jpg'
+        url: '../../../assets/img/backgrounds/gallery-2.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       },
       { id: 5,
         event_name: 'Base Ball',
         category: 'Sport',
         date: '02-11 April 2018',
         location: 'Street West USA',
-        url: '../../../assets/img/backgrounds/gallery-3.jpg'
+        url: '../../../assets/img/backgrounds/gallery-3.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.Suspendisse in sem justo.Integer laoreet magna nec elit suscipit, aclaoreet nibh euismod.Aliquam hendrerit lorem at elit facilisis rutrum.Ut at ullamcorper velit.Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero.Aenean feugiat non eros quis feugiat.'
       }
     ]
 

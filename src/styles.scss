@@ -62,6 +62,7 @@
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
+    margin-top: 50px;
     h2 {
         color: lightgray;
     }
@@ -134,9 +135,10 @@
             margin-bottom: 20px;
         }
     }
-    .schedule {
-        background: #c7a742;
+    .tab-bg {
+        background: #dbdbdb;
     }
+
     .timeline-wrap {
         background-color: #323232;
         ul {

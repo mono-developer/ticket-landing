@@ -41,6 +41,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.config = {
             speed: 600,
             parallax: true,
+            // autoplay: {
+            //   delay: 3000,
+            //   disableOnInteraction: true,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,

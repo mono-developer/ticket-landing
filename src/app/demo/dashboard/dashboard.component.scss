@@ -130,6 +130,23 @@ mat-form-field {
       float: left;
       padding-left: 30px;
     }
+    .des-right {
+      width: calc(50% - 40px);
+      position: absolute;
+      right: 40px;
+      bottom: 30px;
+      .title,
+      .subtitle,
+      .text,
+      .date,
+      .location {
+        text-align: right;
+        p {
+          text-align: right;
+        }
+      }
+    }
+
     .image-right {
       width: 50%;
       bottom: 50px;
@@ -140,20 +157,23 @@ mat-form-field {
         display: block;
         margin: 0 auto;
         border: 2px solid #009800;
+        max-width: 500px;
+      }
+    }
+    .image-left {
+      width: 50%;
+      top: 50px;
+      position: absolute;
+      left: 0;
+      img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
       }
     }
 
-    .des-right{
-      width: 50%;
-      float: right;
-      padding-left: 30px;
-      .title, .subtitle, .text, .date, .location{
-        text-align: right;
-        p{
-          text-align: right;
-        }
-      }
-    }
+
 
     .btn-left{
       text-align: left;
@@ -162,17 +182,7 @@ mat-form-field {
       text-align: right;
     }
 
-    .image-left {
-      width: 50%;
-      bottom: 50px;
-      position: absolute;
-      left: 0;
-      img {
-        width: 70%;
-        display: block;
-        margin: 0 auto;
-      }
-    }
+
 }
 
 

@@ -6,14 +6,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" *ngFor="let item of profiles; let index = index">
                 <div class="des-left" [ngClass]="{'des-right': index%2 == 1}">
-                    <div class="title" data-swiper-parallax="-300">{{item.event_name}}</div>
-                    <div class="subtitle" data-swiper-parallax="-200">{{item.category}}</div>
+                    <div class="title" data-swiper-parallax="-400">{{item.event_name}}</div>
+                    <div class="subtitle" data-swiper-parallax="-300">{{item.category}}</div>
                     <div class="date" data-swiper-parallax="-200" ><img src="assets/img/icons/calendar.png" alt="">{{item.date}}</div>
                     <div class="location" data-swiper-parallax="-200"><img src="assets/img/icons/location.png" alt="">{{item.location}}</div>
                     <div class="text" data-swiper-parallax="-100">
                         <p>{{item.description}}</p>
                     </div>
-                    <div class="btn btn-left" [ngClass]="{'btn-right': index%2 == 1}">
+                    <div class="btn btn-left" data-swiper-parallax="0" [ngClass]="{'btn-right': index%2 == 1}">
                         <button class="left_btn" mat-button (click)="openBookingDialog(item.event_name)">Book Now</button>
                         <button class="right_btn" mat-button (click)="openDescriptionDialog(item)">Description</button>
                     </div>
@@ -48,8 +48,8 @@
 
     <div class="event-sec">
         <h2>Categorys</h2>
-        <mat-tab-group>
-            <mat-tab label="TODAY">
+        <mat-tab-group class="tab-bg">
+            <mat-tab label="MUSIC">
                 <div class="swiper-config1">
                     <swiper [config]="config1" #usefulSwiper>
                         <div class="swiper-wrapper">
@@ -68,20 +68,18 @@
                     </swiper>
                 </div>
             </mat-tab>
-
-            <mat-tab label="Today1">
-
-            </mat-tab>
-
-            <mat-tab label="Today2">
-
-            </mat-tab>
+            <mat-tab label="CONCERT"></mat-tab>
+            <mat-tab label="FAMILY"></mat-tab>
+            <mat-tab label="THEATER"></mat-tab>
+            <mat-tab label="SPORT"></mat-tab>
+            <mat-tab label="CIRCUS"></mat-tab>
+            <mat-tab label="OTHER"></mat-tab>
         </mat-tab-group>
     </div>
 
     <div class="event-sec">
         <h2>Schedule</h2>
-        <mat-tab-group class="schedule">
+        <mat-tab-group class="tab-bg">
             <mat-tab label="TODAY" class="sch-table">
                 <div class="timeline-wrap  overflow-hide mb-30">
                     <ul class="timeline">
